@@ -1,5 +1,6 @@
 <?php
 require 'crud_bootstrap.php';
+require 'auth_check.php';
 $error=''; $name=''; $level='Beginner';
 if($_SERVER['REQUEST_METHOD']==='POST'){
  verify_csrf();$name=trim((string)($_POST['skill_name']??''));$level=trim((string)($_POST['skill_level']??''));
